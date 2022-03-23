@@ -20,5 +20,5 @@ def muted_user_list():
 
 
 @app.schedule(Rate(15, unit=Rate.MINUTES))
-def suppresses_lambda():
+def suppresses_lambda(event):
     suppressor.suppresses_users(api)
