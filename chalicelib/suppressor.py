@@ -16,4 +16,6 @@ def suppresses_users(api, count=200):
 def muted_users(api):
     users = [{"name": user.screen_name,
               "id": user.id} for user in api.mutes()]
-    return users
+
+    return {"users": users,
+            "count": len(users)}
