@@ -1,0 +1,20 @@
+{
+  "version": "2.0",
+  "app_name": "chaosSuppressor",
+  "automatic_layer": true,
+  "stages": {
+    "dev": {
+      "lambda_memory_size": 128,
+      "lambda_timeout": 300,
+      "api_gateway_stage": "api",
+      "environment_variables": {
+        "TWITTER_CONSUMER_KEY" : "",
+        "TWITTER_CONSUMER_SECRET": "",
+        "TWITTER_ACCESS_TOKEN" : "",
+        "TWITTER_ACCESS_TOKEN_SECRET" : "",
+        "MUTE_LIST_URL": "https://gist.githubusercontent.com/kemalcanbora/fdff0cd956a9d30f2e136c0e3aa94e92/raw/58be5bab0600b660c44474c1c364564233a47b82/chaosCleaner.json"
+      }
+    }
+  }
+}
+
