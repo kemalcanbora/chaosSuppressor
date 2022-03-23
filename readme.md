@@ -1,3 +1,12 @@
+
+<p align="center">
+  <img 
+    width="600px"
+    height="400px"
+    src="https://mbcoder.com/wp-content/uploads/2018/03/herr_mannelig_by_ephy_drow-d4pdfvs.jpg"
+  >
+</p>
+
 ## What is Chaos Suppressor?
 If you are tired of software engineer exaggerations on your Twitter timeline, this is for you.
 
@@ -16,3 +25,6 @@ Chaos Suppressor is a serverless application and we use AWS Chalice to run it.
 
 ## Where can I find the mute list?
 You can find the mute list in the `https://gist.github.com/kemalcanbora/fdff0cd956a9d30f2e136c0e3aa94e92` url.
+
+
+
