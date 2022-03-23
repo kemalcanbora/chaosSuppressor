@@ -2,6 +2,7 @@ from chalicelib.mute_words import get_mute_words
 from chalicelib.helper import stop_words_clean
 from collections import Counter
 from itertools import takewhile
+import tweepy
 
 
 def suppresses_users(api, count=75, threshold=3, users_last_n_tweets=10):
@@ -32,8 +33,10 @@ def suppresses_users(api, count=75, threshold=3, users_last_n_tweets=10):
 
 
 def muted_users(api):
-    users = [{"name": user.screen_name,
-              "id": user.id} for user in api.mutes()]
+    mutes = []
+    for page in tweepy.Cursor(api.mutes, count=200).pages():
+        for user in page:
+            mutes.append({"screen_name": user.screen_name, "id": user.id})
 
-    return {"users": users,
-            "count": len(users)}
+    return {"users": mutes,
+            "count": len(mutes)}
