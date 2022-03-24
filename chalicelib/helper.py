@@ -6,7 +6,7 @@ def stop_words_clean(word):
     """
     Remove stop words from a string.
     """
-    stop_words = open(os.getcwd()+'/stop-words.txt', 'r').read().split('\n')
+    stop_words = open('./chalicelib/stop-words.txt', 'r').read().split('\n')
 
     res = re.sub(r'[^\w\s]', '', word)
     words = res.split()
